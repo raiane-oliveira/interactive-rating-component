@@ -18,7 +18,8 @@ button {
     cursor: pointer;
 }
 
-.rating-state {
+.rating-state,
+.thank-you-state {
     background-image: linear-gradient(to top, hsl(212, 18%, 14%), hsl(212, 18%, 14%));
     border-radius: 1.5rem;
     color: white;
@@ -89,4 +90,8 @@ button {
 .btn-rating-clicked {
     background-color: hsl(25, 97%, 53%);
     color: white;
+}
+
+.thank-you-state {
+    display: none;
 }

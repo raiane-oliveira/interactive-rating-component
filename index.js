@@ -4,9 +4,6 @@ const ratingButtons = document.querySelectorAll(".btn-rating")
 const submitBtn = document.querySelector(".btn-submit")
 let starRating = 0;
 
-// Esconde o thankYouState por padrão
-thankYouState.style.display = "none"
-
 document.addEventListener("click", (event) => {
     const element = event.target
 
@@ -15,11 +12,15 @@ document.addEventListener("click", (event) => {
             button.classList.remove("btn-rating-clicked")
             button.classList.add("hover")
         }
+
+        if (button === element) {
+
+            element.classList.add("btn-rating-clicked")
+            element.classList.remove("hover")
+        }
     })
             
-    element.classList.add("btn-rating-clicked")
-    element.classList.remove("hover")
-
     // Armazena a classificação
     starRating = element.dataset.rating
+
 })
