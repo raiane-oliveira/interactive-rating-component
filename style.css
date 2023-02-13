@@ -23,7 +23,7 @@ button {
     background-image: linear-gradient(to top, hsl(212, 18%, 14%), hsl(212, 18%, 14%));
     border-radius: 1.5rem;
     color: white;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     width: 25rem;
 
     display: grid;
@@ -36,15 +36,17 @@ button {
     padding: 1rem;
 }
 
-.rating-state h2 {
+.rating-state h2,
+.thank-you-state h2 {
     font-size: 2rem;
     line-height: 1;
     margin-top: 1rem;
 }
 
-.rating-state p {
+.rating-state p,
+.thank-you-state h2 + p {
     color: hsl(217, 12%, 63%);
-    padding-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 .group-btn-rating {
@@ -94,4 +96,24 @@ button {
 
 .thank-you-state {
     display: none;
+    text-align: center;
+}
+
+.thank-you-state h2 + p {
+    margin: .7rem 0;
+}
+
+.thank-you-state-box {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+
+.selected-rating {
+    color: hsl(25, 97%, 53%);
+    background-color: #242E36;
+    padding: .5rem;
+    border-radius: 2rem;
+    width: 60%;
+    margin-bottom: 1rem;
 }

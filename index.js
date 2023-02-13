@@ -2,7 +2,7 @@ const thankYouState = document.querySelector(".thank-you-state")
 const ratingState = document.querySelector(".rating-state")
 const ratingButtons = document.querySelectorAll(".btn-rating")
 const submitBtn = document.querySelector(".btn-submit")
-let starRating = 0;
+let starRating = 0
 
 document.addEventListener("click", (event) => {
     const element = event.target
@@ -14,13 +14,19 @@ document.addEventListener("click", (event) => {
         }
 
         if (button === element) {
-
             element.classList.add("btn-rating-clicked")
             element.classList.remove("hover")
+
+            // Armazena a classificação
+            starRating = element.dataset.rating
         }
     })
             
-    // Armazena a classificação
-    starRating = element.dataset.rating
+    if (element === submitBtn) {
+        thankYouState.style.display = "block"
+        ratingState.style.display = "none"
 
+        // Mostra classificação na tela
+        document.querySelector("#show-rating").innerHTML = starRating
+    }
 })
