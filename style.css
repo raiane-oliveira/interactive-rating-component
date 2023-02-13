@@ -62,7 +62,7 @@ button {
     transition: background 300ms;
 }
 
-.btn-rating:hover {
+.hover:hover {
     background-color: hsl(217, 12%, 63%);
     color: white;
 }
@@ -84,4 +84,9 @@ button {
 .btn-submit:hover {
     background-color: white;
     color: hsl(25, 97%, 53%);
+}
+
+.btn-rating-clicked {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
 }
